@@ -1,22 +1,18 @@
 #include <stdio.h>
-int*	split_into_blocks(int nbr, int blocks[]) 
+int	split_into_blocks(int nbr, int blocks[]) 
 {	
-	int n = nbr;
-	int i;
 
-	while(n > 0)
+	int i;
+	i = 0;
+
+	while(nbr > 0)
 	{
-		blocks[i] = n % 1000;
-		n = n / 1000;
+		blocks[i] = nbr % 1000;
+		nbr / 1000;
 		i++;
 		
 	}	
-	return blocks;
-
+	return i;
+ //fonction "sensée" écrire chaque bloc de 3 chiffres dans un tableau déclaré dans une autre fonction. Malloc pas encore pris en compte...
 }
 
-int main ()
-{
-	int blocks[10];
-	printf("%d",split_into_blocks(432546));
-}
